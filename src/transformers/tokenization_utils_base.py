@@ -26,6 +26,7 @@ import warnings
 from collections import UserDict
 from enum import Enum
 from typing import Any, Dict, List, NamedTuple, Optional, Sequence, Tuple, Union
+import pdb
 
 import numpy as np
 from tokenizers import AddedToken
@@ -1294,6 +1295,8 @@ class PreTrainedTokenizerBase(SpecialTokensMixin):
         # Save inputs and kwargs for saving and re-loading with ``save_pretrained``
         tokenizer.init_inputs = init_inputs
         tokenizer.init_kwargs = init_kwargs
+
+        pdb.set_trace()
 
         # If there is a complementary special token map, load it
         special_tokens_map_file = resolved_vocab_files.pop("special_tokens_map_file", None)
